@@ -16,3 +16,8 @@ data class Data(
     val water_level_2 : String,
     val water_level_3 : String
 )
+
+data class Notice(
+    val title : String,
+    val content : String
+)

@@ -12,14 +12,30 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.BIGHORN_VIEW">
-        <activity android:name=".DataRvAdapter"></activity>
-        <activity android:name=".DataViewActivity" />
+        <activity android:name=".DataDetailActivity"></activity>
+        <activity android:name=".GraphActivity" />
+        <activity android:name=".SettingActivity" />
+        <activity android:name=".NoticeDetailActivity" />
+        <activity android:name=".QuestionDetailActivity" />
+        <activity android:name=".CreateQuestionActivity" />
+        <activity android:name=".QuestionActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity android:name=".NoticeRvAdapter" />
+        <activity android:name=".DataViewActivity" />
+        <activity android:name=".NoticeActivity">
+
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
+
+
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
         </activity>
     </application>
 

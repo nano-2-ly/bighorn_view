@@ -7,14 +7,359 @@
     tools:context=".MainActivity">
 
 
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/mRecyclerView"
+    <TextView
+        android:id="@+id/serviceName"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="HOME"
+        android:textSize="30dp"
 
-    </androidx.recyclerview.widget.RecyclerView>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </TextView>
+
+    <HorizontalScrollView
+        android:id="@+id/horizontalScrollView"
+        android:layout_width="250dp"
+        android:layout_height="300dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/serviceName">
+
+        <LinearLayout
+            android:layout_width="260dp"
+            android:layout_height="300dp"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
 
 
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_gravity="center"
+                    android:alpha="40"
+                    android:src="@drawable/thermometer">
+
+                </ImageView>
+
+                <TextView
+                    android:id="@+id/textview1"
+                    android:layout_width="250dp"
+                    android:layout_height="100dp"
+                    android:layout_marginRight="10dp"
+                    android:gravity="center"
+                    android:text="-"
+                    android:textAlignment="center"
+
+
+                    android:textSize="60dp">
+
+                </TextView>
+
+                <TextView
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:text="온도"
+                    android:textAlignment="center"
+                    android:textSize="30dp">
+
+                </TextView>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_gravity="center"
+                    android:alpha="40"
+                    android:src="@drawable/sea_level">
+
+                </ImageView>
+
+                <TextView
+                    android:id="@+id/textview2"
+                    android:layout_width="250dp"
+                    android:layout_height="100dp"
+                    android:layout_marginRight="10dp"
+                    android:gravity="center"
+                    android:text="-"
+                    android:textAlignment="center"
+
+
+                    android:textSize="60dp">
+
+                </TextView>
+
+                <TextView
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:text="수위"
+                    android:textAlignment="center"
+                    android:textSize="30dp">
+
+                </TextView>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_gravity="center"
+                    android:alpha="40"
+                    android:src="@drawable/water_pollution">
+
+                </ImageView>
+
+                <TextView
+                    android:id="@+id/textview3"
+                    android:layout_width="250dp"
+                    android:layout_height="100dp"
+                    android:layout_marginRight="10dp"
+                    android:gravity="center"
+                    android:text="-"
+                    android:textAlignment="center"
+
+
+                    android:textSize="60dp">
+
+                </TextView>
+
+                <TextView
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:text="탁도"
+                    android:textAlignment="center"
+                    android:textSize="30dp">
+
+                </TextView>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </LinearLayout>
+
+    </HorizontalScrollView>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/menu_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView"
+        android:orientation="vertical"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/notice_layout"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:padding="5dp"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+
+            app:layout_constraintTop_toTopOf="parent"
+            android:background="@drawable/textlines"
+            android:layout_marginLeft="100dp"
+            android:layout_marginRight="100dp">
+
+            <ImageView
+                android:id="@+id/notice_image"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:src="@drawable/problem">
+
+            </ImageView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:textSize="30dp"
+                app:layout_constraintStart_toEndOf="@+id/notice_image"
+                app:layout_constraintTop_toTopOf="parent"
+
+                android:text="공지사항">
+
+            </TextView>
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/FAQ_layout"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:padding="5dp"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/notice_layout"
+            android:background="@drawable/textlines"
+            android:layout_marginLeft="100dp"
+            android:layout_marginRight="100dp">
+
+            <ImageView
+                android:id="@+id/FAQ_image"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:src="@drawable/help">
+
+            </ImageView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:textSize="30dp"
+                app:layout_constraintStart_toEndOf="@+id/FAQ_image"
+                app:layout_constraintTop_toTopOf="parent"
+
+                android:text="FAQ">
+
+            </TextView>
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/question_layout"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:padding="5dp"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+
+            app:layout_constraintTop_toBottomOf="@+id/FAQ_layout"
+            android:background="@drawable/textlines"
+            android:layout_marginLeft="100dp"
+            android:layout_marginRight="100dp">
+
+            <ImageView
+                android:id="@+id/question_image"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:src="@drawable/phone">
+
+            </ImageView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:textSize="30dp"
+                app:layout_constraintStart_toEndOf="@+id/question_image"
+                app:layout_constraintTop_toTopOf="parent"
+
+                android:text="문의하기">
+
+            </TextView>
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="10dp"
+        app:layout_constraintStart_toStartOf="parent">
+
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintEnd_toStartOf="@+id/button2"
+
+            android:background="@drawable/home"
+
+
+            app:layout_constraintTop_toTopOf="parent">
+
+        </Button>
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            app:layout_constraintStart_toEndOf="@+id/button"
+            app:layout_constraintEnd_toStartOf="@+id/button3"
+            app:layout_constraintHorizontal_weight="1"
+            android:background="@drawable/graph"
+            app:layout_constraintTop_toTopOf="parent">
+
+        </Button>
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            app:layout_constraintStart_toEndOf="@+id/button2"
+            app:layout_constraintEnd_toStartOf="@+id/button4"
+            app:layout_constraintHorizontal_weight="1"
+            android:background="@drawable/link"
+            app:layout_constraintTop_toTopOf="parent">
+
+        </Button>
+
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            app:layout_constraintStart_toEndOf="@+id/button3"
+            app:layout_constraintEnd_toStartOf="@+id/button5"
+            app:layout_constraintHorizontal_weight="1"
+            android:background="@drawable/group"
+            app:layout_constraintTop_toTopOf="parent">
+
+        </Button>
+
+        <Button
+            android:id="@+id/button5"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            app:layout_constraintStart_toEndOf="@+id/button4"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:background="@drawable/settings"
+            app:layout_constraintTop_toTopOf="parent">
+
+        </Button>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
